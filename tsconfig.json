@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "es2017" ,//só para node projects
+    "module": "commonjs",
+    "lib": [
+      "es6"
+    ],
+    "allowJs": true,
+    "outDir": "./dist", //destino da transpilação de ts em js
+    "rootDir": "./src", //destino da pasta raiz que contem o arquivo ts
+    "removeComments": true,
+    "strict": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/@types"
+    ],
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@controllers/*": ["./src/controllers/*"], 
+      "@config/*": ["./src/config/*"], 
+      "@models/*": ["./src/models/*"], 
+      "@views/*": ["./src/views/*"], 
+    }
+  },
+  "include": [
+    "src/**/*"
+  ] // para os paths funcionarem
+}
